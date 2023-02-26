@@ -1,5 +1,5 @@
 [rewrite_local]
-^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/InnFen/forown/Unlock/ai.js
+^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/InnFen/forown/main/Unlock/ai.js
 
 [mitm]
 hostname = *.music.163.com
