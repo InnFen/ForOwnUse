@@ -1,5 +1,19 @@
+/***********************************
+> 应用名称：WPS Office v11.29.0
+> 脚本功能：解锁会员
+> 更新时间：2023-03-18
+> 特别说明：本脚本仅供学习交流使用
+            
+[rewrite_local]
+# ～ WPS Office解锁会员
+^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/InnFen/forown/main/Unlock/WPS.js
+
+[mitm]
+hostname = account.wps.cn
+***********************************/
+
 var body = JSON.parse($response.body);
-var obj = {
+var InnFen = {
   exp: 0,
   level: 3,
   privilege: [
@@ -29,4 +43,4 @@ var obj = {
   expire_time: 1716179347
 };
 
-$done({ body: JSON.stringify(obj) });
+$done({ body: JSON.stringify(InnFen) });
